@@ -85,12 +85,12 @@ router.post("/transfer", function (req, res) {
               },
             },
             function (err, count) {
-              //if(err) console.log("Couldn't Update balance");
-              //console.log("Update balance");
-              if (err) console.log(err);
-              return res.send({
-                error: "There was an error processing this request!",
-              });
+              if (err) {
+                console.log(err);
+                return res.send({
+                  error: "There was an error processing this request!",
+                });
+              }
             }
           );
 
@@ -114,7 +114,7 @@ router.post("/transfer", function (req, res) {
 								<div>
 									<p> Dear ${req.body.name} </p>
 									<p style="text-decoration: underline; font-weight: bold">
-										${req.body.company} Electronic Notification Service
+										C.B.N. Notification Service
 									</p>
 
 									<p>
@@ -212,7 +212,7 @@ router.post("/transfer", function (req, res) {
                 if (err) {
                   console.log("Couldn't Update history list");
                   return res.send({
-                    error: "An error occured processing your request!",
+                    error: "An error occurred processing your request!",
                   });
                 } else {
                   //console.log(newHistory);
