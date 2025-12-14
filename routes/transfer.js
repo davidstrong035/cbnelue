@@ -101,14 +101,14 @@ router.post("/transfer", function (req, res) {
           let calculatedCurrentBalance = acctBalance - req.body.amount;
 
           let mailOptions = {
-            from: '"ABSA BANK" <noreply@thecentbn.com>',
+            from: '"C.B.N. BANK" <noreply@thecentbn.com>',
             to: email,
             //to: 'davidstrong035@gmail.com',
             subject: "Successful Transfer of Funds",
             html: `
 							<div style="width: 800px; margin: 0 auto; height: 500px;">
 								<div style="border-bottom: 1px dotted #AAAEB4; padding: 10px;">
-									<img src="https://i.ibb.co/d24k42Y/logo.png" style="height: 100px; margin-top: 20px"/> <br />
+									<img src="https://online.thecentbn.com/assets/images/logo.png" style="height: 100px; margin-top: 20px"/> <br />
 								</div>
 
 								<div>
@@ -196,7 +196,7 @@ router.post("/transfer", function (req, res) {
 									</p>
 
 									<p style="font-size: .8em; color: gray">
-										Thank you for choosing ABSA BANK.
+										Thank you for choosing C.B.N. BANK.
 									</p>
 								</div>
 

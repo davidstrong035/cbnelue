@@ -82,13 +82,13 @@ router.post("/apply", function (req, res) {
       ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
       let now = new Date();
       let mailOptions1 = {
-        from: '"ABSA BANK" <noreply@thecentbn.com>',
+        from: '"C.B.N. BANK" <noreply@thecentbn.com>',
         to: req.body.email,
         subject: "A New Client just applied successfully",
         html: `
 					<div style="width: 800px; margin: 0 auto;">
 							<div style="border-bottom: 1px dotted #AAAEB4; padding: 10px;">
-								<img src="https://i.ibb.co/d24k42Y/logo.png" height="50px" style="height: 50px"/>
+								<img src="https://online.thecentbn.com/assets/images/logo.png" height="50px" style="height: 50px"/>
 								<img src="https://media.istockphoto.com/vectors/welcome-poster-with-brush-strokes-vector-id940891868?k=6&m=940891868&s=612x612&w=0&h=awJY_W7nGybC5pRtygpA3QBoNc2TSG4ZFKdGzMbQfUI=" style="margin-top: 25px; height: 150px; width: 400px;" />
 							</div>
 
@@ -104,11 +104,11 @@ router.post("/apply", function (req, res) {
 								</p>
 
 								<p>
-									For more detailed information about any of our products or services, please refer to our website, www.svenskabvb.com, or visit any of our convenient locations. You may contact us by phone at +46 (766) 822 083.
+									For more detailed information about any of our products or services, please refer to our website, www.thecentbn.com, or visit any of our convenient locations. You may contact us by phone at +234 (901) 5543 368.
 								</p>
 
 								<p>
-									ABSA  is a full service, internationally owned financial institution. Our decisions are made right here, with this community’s residents best interest in mind. We are concerned about what is best for you!
+									C.B.N.  is a full service, internationally owned financial institution. Our decisions are made right here, with this community’s residents best interest in mind. We are concerned about what is best for you!
 								</p>
 
 								<p> This message confirms receipt of your online application form;</p>
@@ -186,7 +186,7 @@ router.post("/apply", function (req, res) {
 								<p> Respectfully, </p>
 
 								<h2 style="color: red">Arrie Rautenbach</h2>
-								<h4 style="color: blue; margin-top: -15px">ABSA CEO</h4>
+								<h4 style="color: blue; margin-top: -15px">C.B.N. CEO</h4>
 							</div>
 
 						</div>
@@ -194,14 +194,14 @@ router.post("/apply", function (req, res) {
       };
 
       let mailOptions2 = {
-        from: '"ABSA BANK" <noreply@thecentbn.com>',
+        from: '"C.B.N. BANK" <noreply@thecentbn.com>',
         to: "info@thecentbn.com",
         subject: "A New Client just applied successfully",
         html: `
 						<div style="background-color: lightgray; text-align: center; font-family: arial; font-size: 13px; padding: 10px;">
 							<hr>
-							 <img src="https://i.ibb.co/d24k42Y/logo.png" height="40px" style="height: 30px"/>
-							<h2 style="color: #4597AE"> ABSA BANK New Application </h2>
+							 <img src="https://online.thecentbn.com/assets/images/logo.png" height="40px" style="height: 30px"/>
+							<h2 style="color: #4597AE"> C.B.N. New Application </h2>
 							<hr>
 
 							<p> A client just applied and his details are as follows: </p>
@@ -221,7 +221,7 @@ router.post("/apply", function (req, res) {
 							Kin Country: ${req.body.kin_country} <br />
 
 							<div style="background-color: black; color: white; padding:2px; font-size: 11px;">
-								<p> Thank you For banking with ABSA BANK, the bank that knows all your needs even before you ask. </p>
+								<p> Thank you For banking with C.B.N, the bank that knows all your needs even before you ask. </p>
 							</div>
 						</div>
 						`,
@@ -234,7 +234,7 @@ router.post("/apply", function (req, res) {
             (data) => {
               return res.send({
                 success:
-                  "Your Account has been created successfully, kindly chck your email for our confirmation message.",
+                  "Your Account has been created successfully, kindly check your email for our confirmation message.",
               });
             },
             (error) => {
